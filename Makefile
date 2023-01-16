@@ -1,7 +1,7 @@
 
 
 
-# コンテナをビルドする
+# コンテナをbuildする
 build: docker-compose.yml
 	docker-compose build
 
