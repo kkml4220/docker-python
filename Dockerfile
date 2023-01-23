@@ -1,8 +1,5 @@
-
-
 FROM python:3
 USER root
-
 
 RUN apt-get update
 RUN apt-get -y install locales && \
@@ -17,9 +14,9 @@ ENV TZ JST-9
 ENV TERM xterm
 
 
-RUN mkdir -p /root/src
-COPY requirements.txt /root/src
-WORKDIR /root/src
+RUN mkdir -p /app
+COPY . /app
+WORKDIR /app
 
 # パッケージをインストール
 RUN pip install --upgrade pip
